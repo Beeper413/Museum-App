@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NylanderMobile.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+
+            <Label
+                Text="Nylander Museum of Natural History"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Label
+                Text="Welcome to the Nylander!"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to Nylander" />
+            <Label
+                Text="Select a gallery below to learn more!"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="selection text" />
+
+            <Button
+                x:Name="NorthBtn"
+                Text="North Gallery" 
+                SemanticProperties.Hint="North Gallery Info"
+                Clicked="NorthClicked"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="SouthBtn"
+                Text="South Gallery" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="SouthClicked"
+                HorizontalOptions="Fill" />
+            <Button
+                x:Name="ArchiveBtn"
+                Text="Archives" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="ArchiveClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
